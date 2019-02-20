@@ -1,0 +1,23 @@
+{
+  "name": "react-boilerplate",
+  "version": "0.0.1",
+  "description": "react app scaffold",
+  "repository": "git@github.com:liudingyuan/react-boilerplate.git",
+  "author": "liudingyuan <ldy1994@outlook.com>",
+  "license": "MIT",
+  "private": true,
+  "scripts": {
+    "start": "node drives/scripts/start.js"
+  },
+  "devDependencies": {
+    "chalk": "^2.4.2",
+    "detect-port": "^1.3.0",
+    "fs-extra": "^7.0.1",
+    "html-webpack-plugin": "^3.2.0",
+    "inquirer": "^6.2.2",
+    "opn": "^5.4.0",
+    "webpack": "^4.29.5",
+    "webpack-dev-server": "^3.1.14",
+    "yargs": "^13.2.1"
+  }
+}
