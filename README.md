@@ -1,2 +1,2 @@
 # react-boilerplate
-Build react app with webpack
+Building, don't use.
