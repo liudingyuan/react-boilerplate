@@ -50,6 +50,8 @@ detectPort(wdsOptions.port, wdsOptions.host)
       }).then(({useNextPort}) => {
         if (useNextPort) {
           setup(port, wdsOptions.host)
+        } else {
+          process.exit()
         }
       })
     }

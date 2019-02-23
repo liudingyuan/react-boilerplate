@@ -5,7 +5,8 @@ const resolvePath = relativePath => path.resolve(projectDir, relativePath)
 
 module.exports = {
   entry: resolvePath('src/index.js'),
-  public: resolvePath('public'),
   output: resolvePath('dist'),
+  src: resolvePath('src'),
+  public: resolvePath('public'),
   htmlTemplate: resolvePath('public/index.html')
 }

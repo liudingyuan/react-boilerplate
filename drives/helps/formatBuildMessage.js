@@ -13,6 +13,8 @@ function formatFileSize(size) {
 
   if (value < 1) {
     return size + ' B'
+  } else if (value >= 1024) {
+    return (value / 1024).toFixed(2) + 'MB'
   }
 
   return value.toFixed(2) + ' KB'
@@ -23,8 +25,8 @@ function formatResult(stats) {
   let maxSizeStrLength = 0
 
   const buildInfo = [
-    '  Cost:' + '  ' + stats.time + ' ms',
-    '  buildAt:' + '  ' + new Date(stats.builtAt).toLocaleString()
+    '  Time:' + '  ' + stats.time + ' ms',
+    '  built at:' + '  ' + new Date(stats.builtAt).toLocaleString()
   ].reduce((strs, s) => strs + '\r\n' + s ) + '\n\n'
 
   const result = stats.assets
