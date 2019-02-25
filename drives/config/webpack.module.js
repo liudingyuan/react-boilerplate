@@ -1,6 +1,6 @@
 function loadJS() {
   return {
-    test: /\.(js|jsx)$/,
+    test: /\.(js|jsx|ts|tsx)$/,
     exclude: /node_modules/,
     use: {
       loader: 'babel-loader',

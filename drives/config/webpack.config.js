@@ -1,6 +1,3 @@
-const webpack = require('webpack')
-const HtmlWebpackPlugin = require('html-webpack-plugin')
-
 const paths = require('./paths')
 const {
   loadJS,
@@ -9,6 +6,7 @@ const {
   loadSass,
   loadAssets
 } = require('./webpack.module')
+const createPluginsConfig = require('./webpack.plugins')
 
 module.exports = (env) => {
   const isProductionEnv = env === 'production'
@@ -26,7 +24,7 @@ module.exports = (env) => {
     },
     resolve: {
       modules: ['node_modules', 'src'],
-      extensions: ['.js', '.jsx']
+      extensions: ['.js', '.jsx', '.ts', '.tsx']
     },
     module: {
       strictExportPresence: true,
@@ -39,11 +37,10 @@ module.exports = (env) => {
       ]
     },
     plugins: [
-      new HtmlWebpackPlugin({
-        inject: true,
-        template: paths.htmlTemplate
-      }),
-      isDeveleopmentEnv && new webpack.HotModuleReplacementPlugin()
-    ].filter(Boolean)
+      ...createPluginsConfig({
+        isDeveleopmentEnv,
+        isProductionEnv
+      })
+    ]
   }
 }

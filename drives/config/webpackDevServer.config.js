@@ -6,7 +6,7 @@ module.exports = (options) => {
     compress: true,
     port: options.port,
     host: options.host,
-    clientLogLevel: 'none',
+    clientLogLevel: 'error',
     hot: true,
     publicPath: '/',
     quiet: true,
