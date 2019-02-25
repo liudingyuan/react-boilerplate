@@ -18,6 +18,7 @@ module.exports = {
         'regenerator': true,
         'useESModules': true
       }
-    ]
+    ],
+    '@babel/plugin-proposal-class-properties'
   ]
 }

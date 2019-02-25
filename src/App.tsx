@@ -4,6 +4,10 @@ import './app.scss'
 import bgImg from './bg.png'
 
 export default class App extends Component {
+  state = {
+    name: 'app'
+  }
+
   render() {
     return (
       <div className="main">
